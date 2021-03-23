@@ -1,0 +1,35 @@
+html
+    head
+        title='My pagina'
+        meta(charset="utf-8")
+        link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous")
+    body
+
+      .container
+        if(arreglo.length)
+          table.table
+            thead
+              tr
+                th Id
+                th Nombre
+                th Precio
+                th Imagen
+            tbody
+              each val, index in arreglo
+                tr
+                  th= val.id
+                  td= val.title
+                  td= val.price
+                  td 
+                    img(src=val.thumbnail class="img-fluid" alt="Responsive image")
+        else    
+          h2 No hay productos
+     
+     
+
+
+
+
+
+

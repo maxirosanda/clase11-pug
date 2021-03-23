@@ -17,4 +17,5 @@
 		"price": "345355",
 		"thumbnail": "https://i.ibb.co/hVT6S0V/procesador1.jpg"
 	}
+	
 ]  

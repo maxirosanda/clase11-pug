@@ -6,7 +6,8 @@ var moduloActualizar =require('./moduloActualizar')
 var moduloBorrar = require('./moduloBorrar')
 const app = express()
 var router = express.Router()
-app.set('view engine','ejs')
+app.set('views','./views');
+app.set('view engine','pug')
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 var arreglo=[]
@@ -17,11 +18,11 @@ moduloLeer.leer(fs).then(guardados=>{
   if(guardados) arreglo = JSON.parse(guardados)
 
   router.get('/productos/vista', function (req, res) {
-    res.render('pages/lista', {arreglo:arreglo});
+    res.render('lista.pug', {arreglo:arreglo});
   })
 //------------------------- formulario vista------------------------------
 router.get('/productos', function (req, res) {
-  res.render('pages/formulario')
+  res.render('formulario.pug')
 })
 //-----------------------Producto individual------------------------------------
 
