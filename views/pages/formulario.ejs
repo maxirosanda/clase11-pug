@@ -1,0 +1,23 @@
+<%- include('../parcials/head') %> 
+<div class="container mt-5">
+<form method="post" action="/api/productos/">
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Ingrese Nombre</label>
+      <input type="text" class="form-control" id="nombre" name="nombre" aria-describedby="Nombre">
+      <div id="Nombre" class="form-text">Ingresar nombre del producto</div>
+    </div>
+ 
+    <div class="mb-3">
+      <label for="precio" class="form-label">Ingrese Precio</label>
+      <input type="text" class="form-control" name="precio" id="precio" aria-describedby="Precio">
+      <div id="Precio" class="form-text">Ingresar Precio del producto</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="url" class="form-label">Ingrese URL</label>
+      <input type="text" class="form-control" name="url" id="url" aria-describedby="Url">
+      <div id="Url" class="form-text">Ingresar URL del producto</div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form></div>
+  <%- include('../parcials/footer') %> 

@@ -1,0 +1,34 @@
+<%- include('../parcials/head') %> 
+<div class="container">
+<% if(arreglo.length){ %>
+  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Imagen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% arreglo.forEach(function(objeto) { %>
+        <tr>
+      <th scope="row"><%=objeto.id %></th>
+      <td><%=objeto.title %></td>
+      <td><%=objeto.price %></td>
+      <td><img src="<%=objeto.thumbnail %>" class="img-fluid" alt="Responsive image"></td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>
+<% } else { %>
+  <h2>No hay productos</h2>
+<% } %>
+</div>
+<%- include('../parcials/footer') %> 
+
+
+
+
+
+
